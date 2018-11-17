@@ -15,8 +15,8 @@ rm -f authorized_keys_temp
 chmod 755 $ssh_dir
 chmod 644 ${ssh_dir}/authorized_keys
 
-usermod -G $username wheel
-
+# add to wheel is for nopasswd, but you should check it in /etc/sudoers.
+usermod -G wheel $username
 echo "$username is created."
 
 #userdel $username

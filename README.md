@@ -2,11 +2,11 @@
 There is some server shell
 
 ## add_user_key.sh is for add user setting.
-wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/add_user_key.sh && chmod +x add_user_key.sh
+wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/add_user_key.sh -O add_user_key.sh && chmod +x add_user_key.sh
 
 
 ## brook.sh is for brook setting.
-wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/brook.sh && chmod +x brook.sh
+wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/brook.sh -O brook.sh && chmod +x brook.sh
 
 ## shadowsocks-libev.sh is for shadowsocks setting.
 wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsocks-libev.sh && chmod +x shadowsocks-libev.sh
