@@ -510,7 +510,7 @@ install_shadowsocks(){
 # Install Shadowsocks-libev
 install_shadowsocks_libev(){
     disable_selinux
-    pre_install $3 $4 $5
+    pre_install $1 $2 $3
     download_files
     config_shadowsocks
     firewall_set
@@ -565,7 +565,7 @@ action=$1
 [ -z $1 ] && action=install
 case "$action" in
     install|uninstall)
-        ${action}_shadowsocks_libev
+        ${action}_shadowsocks_libev $2 $3 $4
         ;;
     *)
         echo "Arguments error! [${action}]"

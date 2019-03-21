@@ -15,4 +15,4 @@ wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsock
 wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsocks-manager.sh && chmod +x shadowsocks-manager.sh
 
 ## shadowsocks-libev.sh is for shadowsocks setting with password.
-wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsocks-pw.sh && chmod +x shadowsocks-pw.sh && sudo ./shadowsocks-pw.sh install "" $pw $port $encrypted
+wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsocks-pw.sh && chmod +x shadowsocks-pw.sh && sudo ./shadowsocks-pw.sh install $pw $port $encrypted
