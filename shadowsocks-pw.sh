@@ -264,7 +264,7 @@ pre_install(){
     # Set shadowsocks-libev config password
     echo "Please enter password for shadowsocks-libev:"
     #read -p "(Default password: teddysun.com):" shadowsockspwd
-    shadowsockspwd=$3
+    shadowsockspwd=$1
     [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
     echo
     echo "---------------------------"
@@ -278,7 +278,7 @@ pre_install(){
     dport=$(shuf -i 9000-19999 -n 1)
     echo -e "Please enter a port for shadowsocks-libev [1-65535]"
     #read -p "(Default port: ${dport}):" shadowsocksport
-    shadowsocksport=$4
+    shadowsocksport=$2
     [ -z "$shadowsocksport" ] && shadowsocksport=${dport}
     expr ${shadowsocksport} + 1 &>/dev/null
     if [ $? -eq 0 ]; then
@@ -303,7 +303,7 @@ pre_install(){
         echo -e "${green}${i}${plain}) ${hint}"
     done
     #read -p "Which cipher you'd select(Default: ${ciphers[0]}):" pick
-    pick=$5
+    pick=$3
     echo "pick is ${pick}"
     [ -z "$pick" ] && pick=1
     expr ${pick} + 1 &>/dev/null
@@ -510,7 +510,7 @@ install_shadowsocks(){
 # Install Shadowsocks-libev
 install_shadowsocks_libev(){
     disable_selinux
-    pre_install
+    pre_install $3 $4 $5
     download_files
     config_shadowsocks
     firewall_set
