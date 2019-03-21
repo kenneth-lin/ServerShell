@@ -304,6 +304,7 @@ pre_install(){
     done
     #read -p "Which cipher you'd select(Default: ${ciphers[0]}):" pick
     pick=$5
+    echo "pick is ${pick}"
     [ -z "$pick" ] && pick=1
     expr ${pick} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
