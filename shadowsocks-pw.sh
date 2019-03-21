@@ -325,7 +325,7 @@ pre_install(){
 
     echo
     echo "Press any key to start...or press Ctrl+C to cancel"
-    char=`get_char`
+    #char=`get_char`
     #Install necessary dependencies
     echo -e "[${green}Info${plain}] Checking the EPEL repository..."
     if [ ! -f /etc/yum.repos.d/epel.repo ]; then
