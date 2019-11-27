@@ -16,3 +16,6 @@ wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsock
 
 ## shadowsocks-libev.sh is for shadowsocks setting with password.
 wget https://raw.githubusercontent.com/kenneth-lin/ServerShell/master/shadowsocks-pw.sh && chmod +x shadowsocks-pw.sh && sudo ./shadowsocks-pw.sh install $pw $port $encrypted
+
+## install tcp_bbr to accelerate.
+wget --no-check-certificate https://raw.githubusercontent.com/kenneth-lin/across/master/bbr.sh && chmod +x bbr.sh && sudo sh ./bbr.sh && sudo reboot
