@@ -1,7 +1,7 @@
 import socket
 import datetime
 
-HOST = '::1'                 # Symbolic name meaning all available interfaces
+HOST = '::'                 # Symbolic name meaning all available interfaces
 PORT = 5222              # Arbitrary non-privileged port
 
 sock_server = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
