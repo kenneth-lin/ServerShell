@@ -79,10 +79,10 @@ ARCH="$(uname -m)"
 
 case "$ARCH" in
     x86_64)
-        TARGET="x86_64-unknown-linux-gnu"
+        TARGET="x86_64-unknown-linux-musl"
         ;;
     aarch64)
-        TARGET="aarch64-unknown-linux-gnu"
+        TARGET="aarch64-unknown-linux-musl"
         ;;
     *)
         echo "ERROR: Unsupported architecture: $ARCH"
