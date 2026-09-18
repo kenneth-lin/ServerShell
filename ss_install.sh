@@ -106,7 +106,13 @@ echo ""
 
 echo "[1/7] Installing dependencies..."
 
-dnf install -y tar xz gzip
+# dnf install -y tar xz gzip
+for cmd in tar xz systemctl; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "ERROR: $cmd not found"
+        exit 1
+    fi
+done
 
 # ------------------------------------------------------------
 # Get latest Shadowsocks Rust release
