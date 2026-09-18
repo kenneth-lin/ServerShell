@@ -106,7 +106,12 @@ echo ""
 
 echo "[1/7] Installing dependencies..."
 
-dnf install -y curl tar xz gzip
+for cmd in curl tar xz; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "Installing $cmd..."
+        dnf install -y "$cmd"
+    fi
+done
 
 # ------------------------------------------------------------
 # Get latest Shadowsocks Rust release
