@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 set -euo pipefail
@@ -274,4 +273,3 @@ else
     exit 1
 
 fi
-```
